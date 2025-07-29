@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MBTI 여행가방 테스트</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- index.html <head> 안에 추가 -->
+  <meta property="og:title" content="MBTI 여행가방 테스트" />
+  <meta property="og:description" content="당신의 여행 스타일을 MBTI로 알아보세요! ✈️" />
+  <meta property="og:image" content="https://yourdomain.com/path-to-thumbnail.png" />
+  <meta property="og:url" content="https://yourdomain.com" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="MBTI 여행가방 테스트" />
+  <meta name="twitter:description" content="여행가방 속 성격 유형 테스트, 지금 해보세요!" />
+  <meta name="twitter:image" content="https://yourdomain.com/path-to-thumbnail.png" />
+
+</head>
+<body>
+  <div id="app">
+    <h1>MBTI 여행가방 테스트</h1>
+    <div id="start-screen">
+      <button id="start-btn">시작하기</button>
+    </div>
+
+    <div id="quiz-container" style="display: none;"></div>
+
+    <div id="loading-screen" style="display: none;">
+      <p>당신의 여행 MBTI를 분석 중이에요...</p>
+      <div class="plane-animation">✈️</div>
+      <div class="spinner"></div>
+    </div>
+    
+    <div id="result-container" style="display: none;">
+      <h2>당신의 여행 MBTI는 <span id="result"></span>!</h2>
+      <div id="mbti-result-image"></div>
+      <div id="mbti-result-description"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
