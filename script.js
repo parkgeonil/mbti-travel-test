@@ -151,164 +151,228 @@ const originalQuestions = [
 // MBTI 결과 다국어 데이터
 const mbtiResults = {
   INFP: {
-    img: "results/INFP.png",
+    img: {
+      ko: "results/INFP.png",
+      en: "results/INFP_en.png",
+      ja: "results/INFP_jp.png"
+    },
     desc: {
       ko: "조용하지만 깊은 감성의 소유자. 혼자 떠나는 여행도 즐겨요.",
       en: "Quiet yet deeply emotional; enjoys solo travel.",
       ja: "静かだけど深い感性の持ち主。一人旅も楽しめるタイプ。"
     },
     goodMatch: { ko: "ENFJ, ENFP", en: "ENFJ, ENFP", ja: "ENFJ, ENFP" },
-    badMatch: { ko: "ESTJ, ESTP", en: "ESTJ, ESTP", ja: "ESTJ, ESTP" }
+    badMatch:  { ko: "ESTJ, ESTP", en: "ESTJ, ESTP", ja: "ESTJ, ESTP" }
   },
   ENFP: {
-    img: "results/ENFP.png",
+    img: {
+      ko: "results/ENFP.png",
+      en: "results/ENFP_en.png",
+      ja: "results/ENFP_jp.png"
+    },
     desc: {
       ko: "에너지 넘치고 즉흥적인 모험가! 계획보다는 즐거움이 먼저!",
       en: "Energetic and spontaneous adventurer! Fun before plans!",
       ja: "エネルギッシュで即興的な冒険家！計画より楽しさ優先！"
     },
     goodMatch: { ko: "INFJ, INTJ", en: "INFJ, INTJ", ja: "INFJ, INTJ" },
-    badMatch: { ko: "ISTJ, ISFJ", en: "ISTJ, ISFJ", ja: "ISTJ, ISFJ" }
+    badMatch:  { ko: "ISTJ, ISFJ", en: "ISTJ, ISFJ", ja: "ISTJ, ISFJ" }
   },
   INFJ: {
-    img: "results/INFJ.png",
+    img: {
+      ko: "results/INFJ.png",
+      en: "results/INFJ_en.png",
+      ja: "results/INFJ_jp.png"
+    },
     desc: {
       ko: "섬세한 통찰력으로 여행지에서도 조용한 의미를 찾는 타입.",
       en: "Sensitive insight, finding quiet meaning everywhere.",
       ja: "繊細な洞察力で旅先でも静かな意味を見つけるタイプ。"
     },
     goodMatch: { ko: "ENFP, ENTP", en: "ENFP, ENTP", ja: "ENFP, ENTP" },
-    badMatch: { ko: "ESTP, ESFP", en: "ESTP, ESFP", ja: "ESTP, ESFP" }
+    badMatch:  { ko: "ESTP, ESFP", en: "ESTP, ESFP", ja: "ESTP, ESFP" }
   },
   ENFJ: {
-    img: "results/ENFJ.png",
+    img: {
+      ko: "results/ENFJ.png",
+      en: "results/ENFJ_en.png",
+      ja: "results/ENFJ_jp.png"
+    },
     desc: {
       ko: "사람들을 이끄는 따뜻한 리더! 모두가 함께하는 여행을 선호.",
       en: "Warm leader who brings people together; prefers group trips.",
       ja: "人を引っ張る温かいリーダー！みんな一緒の旅が好き。"
     },
     goodMatch: { ko: "INFP, ISFP", en: "INFP, ISFP", ja: "INFP, ISFP" },
-    badMatch: { ko: "ISTP, INTP", en: "ISTP, INTP", ja: "ISTP, INTP" }
+    badMatch:  { ko: "ISTP, INTP", en: "ISTP, INTP", ja: "ISTP, INTP" }
   },
   ISFP: {
-    img: "results/ISFP.png",
+    img: {
+      ko: "results/ISFP.png",
+      en: "results/ISFP_en.png",
+      ja: "results/ISFP_jp.png"
+    },
     desc: {
       ko: "감각적인 취향으로 감성 가득한 장소를 잘 찾는 감성러.",
       en: "An aesthetic lover who finds beautifully emotional places easily.",
       ja: "感覚的なセンスでエモいスポットを見つけるのが得意なタイプ。"
     },
     goodMatch: { ko: "ENFJ, ESFP", en: "ENFJ, ESFP", ja: "ENFJ, ESFP" },
-    badMatch: { ko: "ENTJ, INTJ", en: "ENTJ, INTJ", ja: "ENTJ, INTJ" }
+    badMatch:  { ko: "ENTJ, INTJ", en: "ENTJ, INTJ", ja: "ENTJ, INTJ" }
   },
   ESFP: {
-    img: "results/ESFP.png",
+    img: {
+      ko: "results/ESFP.png",
+      en: "results/ESFP_en.png",
+      ja: "results/ESFP_jp.png"
+    },
     desc: {
       ko: "흥 넘치는 인싸 여행자! 사진 찍고 노는 걸 제일 잘해요!",
       en: "Super-social traveler! Great at having fun and taking photos!",
       ja: "テンション高めな人気者タイプ！遊んだり写真を撮るのが大得意！"
     },
     goodMatch: { ko: "ISFP, ESFJ", en: "ISFP, ESFJ", ja: "ISFP, ESFJ" },
-    badMatch: { ko: "INTP, INFJ", en: "INTP, INFJ", ja: "INTP, INFJ" }
+    badMatch:  { ko: "INTP, INFJ", en: "INTP, INFJ", ja: "INTP, INFJ" }
   },
   ISFJ: {
-    img: "results/ISFJ.png",
+    img: {
+      ko: "results/ISFJ.png",
+      en: "results/ISFJ_en.png",
+      ja: "results/ISFJ_jp.png"
+    },
     desc: {
       ko: "모두의 안전과 편의를 먼저 챙기는 든든한 여행 메이트.",
       en: "Reliable travel companion prioritizing everyone's comfort and safety.",
       ja: "みんなの安全と快適さを一番に考える、頼もしい旅の仲間。"
     },
     goodMatch: { ko: "ESFP, ESTP", en: "ESFP, ESTP", ja: "ESFP, ESTP" },
-    badMatch: { ko: "ENTP, ENFP", en: "ENTP, ENFP", ja: "ENTP, ENFP" }
+    badMatch:  { ko: "ENTP, ENFP", en: "ENTP, ENFP", ja: "ENTP, ENFP" }
   },
   ESFJ: {
-    img: "results/ESFJ.png",
+    img: {
+      ko: "results/ESFJ.png",
+      en: "results/ESFJ_en.png",
+      ja: "results/ESFJ_jp.png"
+    },
     desc: {
       ko: "친화력 갑! 모두가 행복한 여행을 만들어주는 사교 천재.",
       en: "Super-friendly social genius making every trip happier for everyone.",
       ja: "抜群の親和力でみんなが幸せになる旅を作る社交上手タイプ。"
     },
     goodMatch: { ko: "ISFP, INFP", en: "ISFP, INFP", ja: "ISFP, INFP" },
-    badMatch: { ko: "INTP, ISTP", en: "INTP, ISTP", ja: "INTP, ISTP" }
+    badMatch:  { ko: "INTP, ISTP", en: "INTP, ISTP", ja: "INTP, ISTP" }
   },
   INTJ: {
-    img: "results/INTJ.png",
+    img: {
+      ko: "results/INTJ.png",
+      en: "results/INTJ_en.png",
+      ja: "results/INTJ_jp.png"
+    },
     desc: {
       ko: "치밀한 계획과 분석력으로 완벽한 여행 루트를 짜는 전략가.",
       en: "Strategist who meticulously plans and analyzes the perfect itinerary.",
       ja: "綿密な計画と分析力で完璧な旅程を組み立てる戦略家タイプ。"
     },
     goodMatch: { ko: "ENFP, ENTP", en: "ENFP, ENTP", ja: "ENFP, ENTP" },
-    badMatch: { ko: "ESFP, ESFJ", en: "ESFP, ESFJ", ja: "ESFP, ESFJ" }
+    badMatch:  { ko: "ESFP, ESFJ", en: "ESFP, ESFJ", ja: "ESFP, ESFJ" }
   },
   ENTJ: {
-    img: "results/ENTJ.png",
+    img: {
+      ko: "results/ENTJ.png",
+      en: "results/ENTJ_en.png",
+      ja: "results/ENTJ_jp.png"
+    },
     desc: {
       ko: "리더십 폭발! 여행도 프로젝트처럼 완벽하게 진행하는 스타일.",
       en: "Natural-born leader treating travel like a perfectly executed project.",
       ja: "リーダーシップ全開！旅行もプロジェクトのように完璧にこなすタイプ。"
     },
     goodMatch: { ko: "INFP, INTP", en: "INFP, INTP", ja: "INFP, INTP" },
-    badMatch: { ko: "ISFP, ESFP", en: "ISFP, ESFP", ja: "ISFP, ESFP" }
+    badMatch:  { ko: "ISFP, ESFP", en: "ISFP, ESFP", ja: "ISFP, ESFP" }
   },
   INTP: {
-    img: "results/INTP.png",
+    img: {
+      ko: "results/INTP.png",
+      en: "results/INTP_en.png",
+      ja: "results/INTP_jp.png"
+    },
     desc: {
       ko: "호기심 많은 탐험가. 새로운 문화와 지식에 끌려요.",
       en: "Curious explorer drawn to new cultures and knowledge.",
       ja: "好奇心旺盛な探検家タイプ。新しい文化や知識に惹かれる。"
     },
     goodMatch: { ko: "ENTP, INFJ", en: "ENTP, INFJ", ja: "ENTP, INFJ" },
-    badMatch: { ko: "ESFJ, ESTJ", en: "ESFJ, ESTJ", ja: "ESFJ, ESTJ" }
+    badMatch:  { ko: "ESFJ, ESTJ", en: "ESFJ, ESTJ", ja: "ESFJ, ESTJ" }
   },
   ENTP: {
-    img: "results/ENTP.png",
+    img: {
+      ko: "results/ENTP.png",
+      en: "results/ENTP_en.png",
+      ja: "results/ENTP_jp.png"
+    },
     desc: {
       ko: "유쾌하고 아이디어 넘치는 탐험가! 어디서든 친구를 만들어요.",
       en: "Cheerful, idea-rich adventurer who makes friends everywhere.",
       ja: "明るくてアイデア満載の冒険家タイプ！どこでも友達を作れる。"
     },
     goodMatch: { ko: "INFJ, INTJ", en: "INFJ, INTJ", ja: "INFJ, INTJ" },
-    badMatch: { ko: "ISFJ, ISTJ", en: "ISFJ, ISTJ", ja: "ISFJ, ISTJ" }
+    badMatch:  { ko: "ISFJ, ISTJ", en: "ISFJ, ISTJ", ja: "ISFJ, ISTJ" }
   },
   ISTP: {
-    img: "results/ISTP.png",
+    img: {
+      ko: "results/ISTP.png",
+      en: "results/ISTP_en.png",
+      ja: "results/ISTP_jp.png"
+    },
     desc: {
       ko: "자유로운 혼행러. 문제 상황도 침착하게 해결하는 현실주의자.",
       en: "Free-spirited solo traveler; calmly solves problems practically.",
       ja: "自由な一人旅派。問題も冷静に解決する現実派。"
     },
     goodMatch: { ko: "ESFP, ESTP", en: "ESFP, ESTP", ja: "ESFP, ESTP" },
-    badMatch: { ko: "ENFJ, ESFJ", en: "ENFJ, ESFJ", ja: "ENFJ, ESFJ" }
+    badMatch:  { ko: "ENFJ, ESFJ", en: "ENFJ, ESFJ", ja: "ENFJ, ESFJ" }
   },
   ESTP: {
-    img: "results/ESTP.png",
+    img: {
+      ko: "results/ESTP.png",
+      en: "results/ESTP_en.png",
+      ja: "results/ESTP_jp.png"
+    },
     desc: {
       ko: "직접 경험하고 느끼는 게 최고! 현장감 넘치는 여행을 좋아해요.",
       en: "Loves hands-on experiences, appreciating vivid, real-time travel.",
       ja: "自分で体験するのが一番！臨場感ある旅が大好き。"
     },
     goodMatch: { ko: "ISFJ, ISTP", en: "ISFJ, ISTP", ja: "ISFJ, ISTP" },
-    badMatch: { ko: "INFJ, INFP", en: "INFJ, INFP", ja: "INFJ, INFP" }
+    badMatch:  { ko: "INFJ, INFP", en: "INFJ, INFP", ja: "INFJ, INFP" }
   },
   ISTJ: {
-    img: "results/ISTJ.png",
+    img: {
+      ko: "results/ISTJ.png",
+      en: "results/ISTJ_en.png",
+      ja: "results/ISTJ_jp.png"
+    },
     desc: {
       ko: "계획 철저! 여행에서도 안정과 규칙을 중시하는 신중파.",
       en: "Thorough planner valuing stability and rules even while traveling.",
       ja: "計画をしっかり立てる派。旅先でも安定とルールを重視する慎重タイプ。"
     },
     goodMatch: { ko: "ESFJ, ISFJ", en: "ESFJ, ISFJ", ja: "ESFJ, ISFJ" },
-    badMatch: { ko: "ENFP, ENTP", en: "ENFP, ENTP", ja: "ENFP, ENTP" }
+    badMatch:  { ko: "ENFP, ENTP", en: "ENFP, ENTP", ja: "ENFP, ENTP" }
   },
   ESTJ: {
-    img: "results/ESTJ.png",
+    img: {
+      ko: "results/ESTJ.png",
+      en: "results/ESTJ_en.png",
+      ja: "results/ESTJ_jp.png"
+    },
     desc: {
       ko: "든든한 책임감으로 여행도 척척! 리더형 여행자.",
       en: "Responsible and reliable; a natural leader in travel situations.",
       ja: "頼れる責任感で旅行をテキパキ仕切るリーダータイプ。"
     },
     goodMatch: { ko: "ISFJ, ISTJ", en: "ISFJ, ISTJ", ja: "ISFJ, ISTJ" },
-    badMatch: { ko: "INFP, INTP", en: "INFP, INTP", ja: "INFP, INTP" }
+    badMatch:  { ko: "INFP, INTP", en: "INFP, INTP", ja: "INFP, INTP" }
   }
 };
 
@@ -420,17 +484,21 @@ function calculateMBTI() {
 function finishQuiz() {
   quizContainer.style.display = "none";
   document.getElementById("loading-screen").style.display = "block";
-  document.getElementById("lang-selector").style.display = "none"; // 언어 선택 숨김!
+  document.getElementById("lang-selector").style.display = "none";
+
   setTimeout(() => {
     const result = calculateMBTI();
     const { img, desc, goodMatch } = mbtiResults[result];
+
+    // 이미지 언어별 처리, 이미지 없으면 ko(한국어) 기본값
+    const imgUrl = img[currentLang] || img["ko"];
 
     document.getElementById("loading-screen").style.display = "none";
     document.getElementById("result-container").style.display = "block";
     document.getElementById("result").textContent = result;
 
     document.getElementById("mbti-result-image").innerHTML =
-      `<img src="${img}" alt="${result} 이미지" style="width: 100%; max-width: 300px; margin-bottom: 1rem;" />`;
+      `<img src="${imgUrl}" alt="${result} 이미지" style="width: 100%; max-width: 300px; margin-bottom: 1rem;" />`;
 
     document.getElementById("mbti-result-description").innerHTML = `
       <p class="result-desc">${desc[currentLang]}</p>
@@ -440,7 +508,7 @@ function finishQuiz() {
       <div class="share-buttons">
         <button onclick="copyLink()">${lang[currentLang].copy}</button>
         <button onclick="shareOnTwitter()">${lang[currentLang].twitter}</button>
-        <button onclick="downloadImage('${img}')">${lang[currentLang].download}</button>
+        <button onclick="downloadImage('${imgUrl}')">${lang[currentLang].download}</button>
         <button id="restart-btn">${lang[currentLang].restart}</button>
       </div>
     `;
@@ -448,7 +516,7 @@ function finishQuiz() {
 
     document.getElementById("restart-btn").addEventListener("click", () => {
       document.getElementById("result-container").style.display = "none";
-      showStartScreen(); // 다시하기 시 첫화면+언어선택 표시
+      showStartScreen();
       updateTexts();
     });
   }, 2500);
