@@ -321,14 +321,6 @@ let scores = { E: 0, I: 0, S: 0, N: 0, T: 0, F: 0, J: 0, P: 0 };
 const startBtn = document.getElementById("start-btn");
 const quizContainer = document.getElementById("quiz-container");
 
-// ---------- 언어 전환 기능 ----------
-// ... (상단 데이터 부분 생략 없이 기존 코드 동일)
-
-let currentLang = "ko";
-
-const startBtn = document.getElementById("start-btn");
-const quizContainer = document.getElementById("quiz-container");
-
 // 첫 화면 전용 함수 (언어 선택 표시)
 function showStartScreen() {
   document.getElementById("start-screen").style.display = "block";
@@ -338,23 +330,24 @@ function showStartScreen() {
   document.getElementById("result-container").style.display = "none";
 }
 
-// ---------- 언어 전환 기능 ----------
 function setLang(l) {
   currentLang = l;
   updateTexts();
 }
+window.setLang = setLang; // (중요: 전역 등록!)
 
+// 텍스트 UI 전체 갱신
 function updateTexts() {
   document.title = lang[currentLang].title;
   document.getElementById("main-title").textContent = lang[currentLang].title;
   document.getElementById("start-btn").textContent = lang[currentLang].start;
   document.getElementById("loading-text").textContent = lang[currentLang].analyzing;
   document.getElementById("result-title").innerHTML = lang[currentLang].resultTitle;
-
   if (document.getElementById("mbti-result-description")) updateResultButtonsLang();
   if (quizContainer.style.display !== "none") showQuestion();
 }
 
+// 결과 버튼/매칭문구 등 갱신
 function updateResultButtonsLang() {
   const matchElem = document.querySelector(".result-match .good");
   if (matchElem) matchElem.textContent = lang[currentLang].goodMatch;
@@ -368,7 +361,6 @@ function updateResultButtonsLang() {
 }
 
 // ---------- 퀴즈 기능 ----------
-
 function shuffle(array) {
   for (let i = array.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -379,7 +371,7 @@ function shuffle(array) {
 
 startBtn.addEventListener("click", () => {
   document.getElementById("start-screen").style.display = "none";
-  document.getElementById("lang-selector").style.display = "none"; // 언어 선택 숨김
+  document.getElementById("lang-selector").style.display = "none"; // 언어 선택 숨김!
   questions = shuffle(originalQuestions.map(q => ({
     q: q.q,
     options: shuffle([...q.options])
@@ -400,7 +392,7 @@ function showQuestion() {
     </div>
   `;
   quizContainer.style.display = "block";
-  document.getElementById("lang-selector").style.display = "none"; // 언어 선택 숨김
+  document.getElementById("lang-selector").style.display = "none"; // 언어 선택 숨김!
 }
 
 window.selectOption = function(index) {
@@ -426,7 +418,7 @@ function calculateMBTI() {
 function finishQuiz() {
   quizContainer.style.display = "none";
   document.getElementById("loading-screen").style.display = "block";
-  document.getElementById("lang-selector").style.display = "none"; // 언어 선택 숨김
+  document.getElementById("lang-selector").style.display = "none"; // 언어 선택 숨김!
   setTimeout(() => {
     const result = calculateMBTI();
     const { img, desc, goodMatch } = mbtiResults[result];
@@ -454,7 +446,7 @@ function finishQuiz() {
 
     document.getElementById("restart-btn").addEventListener("click", () => {
       document.getElementById("result-container").style.display = "none";
-      showStartScreen();
+      showStartScreen(); // 다시하기 시 첫화면+언어선택 표시
       updateTexts();
     });
   }, 2500);
@@ -491,6 +483,6 @@ function downloadImage(imgUrl) {
 
 // ----------- 페이지 로드시 초기화 -----------
 window.addEventListener("DOMContentLoaded", () => {
-  showStartScreen();
+  showStartScreen(); // 첫 화면 진입시 언어선택 표시
   updateTexts();
 });
