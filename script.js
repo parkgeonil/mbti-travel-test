@@ -333,8 +333,10 @@ function showStartScreen() {
 function setLang(l) {
   currentLang = l;
   updateTexts();
+  // 버튼 선택 강조
+  document.querySelectorAll("#lang-selector button").forEach(btn => btn.classList.remove("selected"));
+  document.getElementById(`lang-${l}`).classList.add("selected");
 }
-window.setLang = setLang; // (중요: 전역 등록!)
 
 // 텍스트 UI 전체 갱신
 function updateTexts() {
