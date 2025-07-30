@@ -183,7 +183,7 @@ button:hover {
 
 #lang-selector button {
   background-color: #ffd2dc;
-  color: #111212;
+  color: #fff;
   border: none;
   border-radius: 6px;
   font-size: 15px;
@@ -200,5 +200,5 @@ button:hover {
 #lang-selector button:hover,
 #lang-selector button.selected {
   background-color: #ff9aa2;
-  color: #fff;
+  color: #333;
 }
