@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5128529306088056"
-     crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>여행스타일 테스트</title>
@@ -17,11 +17,18 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="여행스타일 테스트" />
   <meta name="twitter:description" content="여행가방 속 성격 유형 테스트, 지금 해보세요!" />
-  <meta name="twitter:image" content="https://parkgeonil.github.io/mbti-travel-test/thumbnail.png" />
+  <meta name="twitter:image" content="https://mbti-travel-test.pages.dev/thumbnail.png" />
 </head>
 <body>
   <div id="app">
-    <h1>여행스타일 테스트</h1>
+    <!-- 언어 선택 UI -->
+    <div id="lang-selector" style="margin-bottom: 16px;">
+      <button id="lang-ko" onclick="setLang('ko')">한</button>
+      <button id="lang-en" onclick="setLang('en')">EN</button>
+      <button id="lang-ja" onclick="setLang('ja')">日本語</button>
+    </div>
+
+    <h1 id="main-title">여행스타일 테스트</h1>
     <div id="start-screen">
       <button id="start-btn">시작하기</button>
     </div>
@@ -29,18 +36,17 @@
     <div id="quiz-container" style="display: none;"></div>
 
     <div id="loading-screen" style="display: none;">
-      <p>당신의 여행 MBTI를 분석 중이에요...</p>
+      <p id="loading-text">당신의 여행 MBTI를 분석 중이에요...</p>
       <div class="plane-animation">✈️</div>
       <div class="spinner"></div>
     </div>
     
     <div id="result-container" style="display: none;">
-      <h2>당신의 여행 MBTI는 <span id="result"></span>!</h2>
+      <h2 id="result-title">당신의 여행 MBTI는 <span id="result"></span>!</h2>
       <div id="mbti-result-image"></div>
       <div id="mbti-result-description"></div>
     </div>
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>
